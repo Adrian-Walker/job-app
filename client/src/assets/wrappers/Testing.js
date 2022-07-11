@@ -35,6 +35,7 @@ const Wrapper = styled.main`
     .main-img {
       display: block;
     }
+
   }
 `
 export default Wrapper
