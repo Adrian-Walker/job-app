@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from "../assets/images/logo.svg";
 import main from "../assets/images/main.svg";
 
@@ -5,9 +6,9 @@ function Landing() {
   return (
     <main>
       <nav>
-        <img src={logo} className="logo" alt="jobLogo" />
+        <img src={logo} className="logo" alt="jobify" />
       </nav>
-      <div className="container-page">
+      <div className="container page">
         <div className="info">
           <h1>
             job <span>tracking</span> app
@@ -27,8 +28,9 @@ function Landing() {
             sold eight million copies worldwide and won his first two Grammy
             Awards as Best Male R&B Vocal Performance in 2002 and 2003.
           </p>
-          <button></button>
+          <button className="btn btn-hero">Login/Register</button>
         </div>
+        <img src={main} alt="job hunt" className="img main img" />
       </div>
     </main>
   );
