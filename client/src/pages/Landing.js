@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 import logo from "../assets/images/logo.svg";
 import main from "../assets/images/main.svg";
 
 function Landing() {
   return (
-    <main>
+    <Wrapper>
       <nav>
         <img src={logo} className="logo" alt="jobify" />
       </nav>
@@ -32,8 +33,9 @@ function Landing() {
         </div>
         <img src={main} alt="job hunt" className="img main img" />
       </div>
-    </main>
+    </Wrapper>
   );
 }
+const Wrapper = styled.main``;
 
 export default Landing;
