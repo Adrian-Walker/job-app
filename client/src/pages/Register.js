@@ -1,7 +1,6 @@
-import { initial } from "lodash";
 import React, { useState, useEffect } from "react";
 import Wrapper from "../assets/wrappers/RegisterPage";
-import Logo from "../components/Logo";
+import { Logo, FormRow } from "../components";
 
 const initialState = {
   name: "",
@@ -27,18 +26,24 @@ function Register() {
       <form className="form" onSubmit={onSubmit}>
         <Logo />
         <h3>Login</h3>
-        <div className="form-row">
-          <label htmlFor="name" className="form-label">
-            Name
-          </label>
-          <input
-            type="text"
-            value={values.name}
-            name="name"
-            onChange={handleChange}
-            className="form-input"
-          ></input>
-        </div>
+        <FormRow
+          type="text"
+          name="Name"
+          value={values.name}
+          handleChange={handleChange}
+        />
+        <FormRow
+          type="email"
+          name="E-mail"
+          value={values.email}
+          handleChange={handleChange}
+        />
+        <FormRow
+          type="password"
+          name="Password"
+          value={values.password}
+          handleChange={handleChange}
+        />
         <button type="submit" className="btn btn-block">
           Submit
         </button>
