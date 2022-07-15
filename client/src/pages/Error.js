@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import img from "../assets/images/not-found.svg";
 import React from "react";
-import Wrapper from "../assets/wrappers/LandingPage";
+import Wrapper from "../assets/wrappers/ErrorPage";
 
 function Error() {
   return (
-    <Wrapper>
+    <Wrapper className="full-page">
       <div>
-        <img />
+        <img src={img} alt="not found" />
         <h2>Not Found</h2>
-        <p>error txt</p>
+        <p>This Page Cannot Be Found</p>
+        <Link to="/">Back Home</Link>
       </div>
     </Wrapper>
   );
