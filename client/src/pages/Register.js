@@ -11,6 +11,10 @@ const initialState = {
 };
 
 function Register() {
+  const toggleMember = () => {
+    setValues({ ...values, isMember: !values.isMember });
+  };
+
   const handleChange = (e) => {
     console.log(e.target);
   };
@@ -49,6 +53,9 @@ function Register() {
         <button type="submit" className="btn btn-block">
           Submit
         </button>
+        <p>
+           <button type="button" onClick={toggleMember} className='member-btn'>Register</button>
+        </p>
       </form>
     </Wrapper>
   );
